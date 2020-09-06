@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Comandos</title>
+  <!-- Bootstrap 4.4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Styles -->
+  <style>
+    .nav-item a {
+      color: #808689;
+    }
+    .nav-tabs .nav-link.active {
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+<!-- Commands -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <!-- Menu -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" id="console-tab" data-toggle="tab" href="#console" role="tab" aria-controls="console"
+            aria-selected="true">Consola</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="configGit-tab" data-toggle="tab" href="#configGit" role="tab" aria-controls="configGit"
+            aria-selected="false">Configuración Git</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="git-tab" data-toggle="tab" href="#git" role="tab" aria-controls="git"
+            aria-selected="false">Git</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="files-tab" data-toggle="tab" href="#files" role="tab" aria-controls="files"
+            aria-selected="false">Archivos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="glossary-tab" data-toggle="tab" href="#glossary" role="tab" aria-controls="glossary"
+            aria-selected="false">Glosario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="gitignore-tab" data-toggle="tab" href="#gitignore" role="tab" aria-controls="gitignore"
+            aria-selected="false">Gitignore</a>
+        </li>
+      </ul>
+      <!-- End Menu -->
+    </div>
+    <div class="col-12 text-right">
+      <span>
+        <em class="text-right badge badge-info">*Los comandos Git se hacen desde consola (Git bash de preferencia)</em>
+      </span>
+    </div>
+   <div class="col-12">
+      <div class="tab-content" id="myTabContent">
+        <!-- Console Commands -->
+        <div class="tab-pane fade" id="console" role="tabpanel" aria-labelledby="console-tab">
+          <table class="table table-bordered text-center">
+            <thead>
+              <th>#</th>
+              <th>Comando</th>
+              <th class="col-4">Descripción</th>
+              <th class="col-4">Observaciones</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">ls</pre>
+                </td>
+                <td class="text-muted text-justify">Muestra que archivos contiene el directorio</td>
+                <td class="text-muted text-justify"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">ls -al</pre>
+                </td>
+                <td class="text-muted text-justify">Muestra que carpetas y archivos contiene el directorio</td>
+                <td class="text-muted text-justify"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">clear</pre>
+                </td>
+                <td class="text-muted text-justify">Limpia la consola de comandos</td>
+                <td class="text-muted text-justify"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">cd _ruta relativa_</pre>
+                </td>
+                <td class="text-muted text-justify">Cambia la ruta dependiendo la ruta relativa</td>
+                <td class="text-muted text-justify">
+                  Ejemplo:
+                  <pre class="text-danger">cd c:/</pre>
+                  Ejemplo:
+                  <pre class="text-danger">cd c:/laragon</pre>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">q</pre>
+                </td>
+                <td class="text-muted text-justify">Para salir sin guardar cuando consola tenga capturado el cursor</td>
+                <td class="text-muted text-justify"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">wq</pre>
+                </td>
+                <td class="text-muted text-justify">Para guardar y salir cuando consola tenga capturado el cursor</td>
+                <td class="text-muted text-justify"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">pwd</pre>
+                </td>
+                <td class="text-muted text-justify">Muestra la ruta actual de consola</td>
+                <td class="text-muted text-justify"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- End Console commands -->
+
+        <!-- Config Git -->
+        <div class="tab-pane fade" id="configGit" role="tabpanel" aria-labelledby="configGit-tab">
+            <table class="table table-bordered">
+              <thead>
+                <th>#</th>
+                <th>Comando</th>
+                <th>Descripción</th>
+                <th>Observaciones</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>
+                    <pre class="text-danger">git --version</pre>
+                  </td>
+                  <td class="text-muted text-justify">Verifica versión de Git</td>
+                  <td class="text-muted text-justify"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <pre class="text-danger">git help</pre>
+                  </td>
+                  <td class="text-muted text-justify">Muestra los comandos disponibles</td>
+                  <td class="text-muted text-justify"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <pre class="text-danger">git help _comando_</pre>
+                  </td>
+                  <td class="text-muted text-justify">Muestra los comandos disponibles sobre el comando en específico</td>
+                  <td class="text-muted text-justify">
+                    Ejemplo:
+                    <pre class="text-danger">git help commit</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <pre class="text-danger">git _comando_ -h</pre>
+                  </td>
+                  <td class="text-muted text-justify">Muestra los comandos disponibles sobre el comando en específico</td>
+                  <td class="text-muted text-justify">
+                    Ejemplo:
+                    <pre class="text-danger">git commit -h</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <pre class="text-danger">git config --global user.name "nombre"</pre>
+                  </td>
+                  <td class="text-muted text-justify">Asigna un nombre global para los repositorios</td>
+                  <td class="text-muted text-justify">
+                    Ejemplo:
+                    <pre class="text-danger">git config --global user.name "nombre"</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <pre class="text-danger">git config --global user.email "email"</pre>
+                  </td>
+                  <td class="text-muted text-justify">Asigna un email global para los repositorios</td>
+                  <td class="text-muted text-justify">
+                    Ejemplo:
+                    <pre class="text-danger">git config --global user.email "nombre@mail.com"</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <pre class="text-danger">git config --global -e</pre>
+                  </td>
+                  <td class="text-muted text-justify">Muestra la información global de Git</td>
+                  <td class="text-muted text-justify"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <pre class="text-danger">git config --global alias._comandoAlias_ <br> _"comandoOriginal"_</pre>
+                  </td>
+                  <td class="text-muted text-justify">
+                    Crear un alias de forma global (poderlo usar en todos los repositorios)
+                  </td>
+                  <td class="text-muted text-justify">
+                    Ejemplo:
+                    <pre class="text-danger">git config --global alias.s "status -s -b"</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <pre class="text-danger">git config --global -l</pre>
+                  </td>
+                  <td class="text-muted text-justify">
+                    Muestra la configuración global pero sin permiso para editar
+                  </td>
+                  <td class="text-muted text-justify"></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <!-- End Config Git -->
+
+        <!-- Git -->
+        <div class="tab-pane fade show active" id="git" role="tabpanel" aria-labelledby="git-tab">
+
+         <!-- Menu -->
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="generalCommands-tab" data-toggle="tab" href="#generalCommands" role="tab"
+                aria-controls="generalCommands" aria-selected="true">Comandos generales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="add-tab" data-toggle="tab" href="#add" role="tab" aria-controls="add"
+                aria-selected="false">Add</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="commit-tab" data-toggle="tab" href="#commit" role="tab" aria-controls="commit"
+                aria-selected="false">Commit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="checkout-tab" data-toggle="tab" href="#checkout" role="tab" aria-controls="checkout"
+                aria-selected="false">Checkout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="reset-tab" data-toggle="tab" href="#reset" role="tab" aria-controls="reset"
+                aria-selected="false">Reset</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="log-tab" data-toggle="tab" href="#log" role="tab" aria-controls="log"
+                aria-selected="false">Log</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="status-tab" data-toggle="tab" href="#status" role="tab" aria-controls="status"
+                aria-selected="false">Status</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="diff-tab" data-toggle="tab" href="#diff" role="tab" aria-controls="diff"
+                aria-selected="false">Diff</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="branch-tab" data-toggle="tab" href="#branch" role="tab" aria-controls="branch"
+                aria-selected="false">Branch</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="merge-tab" data-toggle="tab" href="#merge" role="tab" aria-controls="merge"
+                aria-selected="false">Merge</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tag-tab" data-toggle="tab" href="#tag" role="tab" aria-controls="tag"
+                aria-selected="false">Tag</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="stash-tab" data-toggle="tab" href="#stash" role="tab" aria-controls="stash"
+                aria-selected="false">Stash</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="rebase-tab" data-toggle="tab" href="#rebase" role="tab" aria-controls="rebase"
+                aria-selected="false">Rebase</a>
+            </li>
+          </ul>
+         <!-- End Menu -->
+
+          <div class="tab-content" id="myTabContent">
+            <!-- General commands -->
+            <div class="tab-pane fade show active" id="generalCommands" role="tabpanel" aria-labelledby="generalCommands-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git init</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Crea la carpeta oculta .git donde se encuentre la ruta en consola y
+                      dónde se guarda toda la información de git, en pocas palabras inicializa el repositorio de Git
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git status</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra el estado de los archivos:
+                      <br>
+                      <span class="text-danger">Rojo:</span> No agregados o modificados sin agregar
+                      <br>
+                      <span class="text-success">Verde:</span> Agregados
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git log</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra todos los commits de forma extendida creados hasta ahora ordenados del 
+                      más reciente(arriba) al más antigüo (abajo)
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git diff</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra los cambios que hubo en los archivos
+                      <br>
+                      <span class="text-danger">Rojo:</span> Archivo original
+                      <br>
+                      <span class="text-success">Verde:</span> Cambios en el archivo original
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git reflog</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra todo lo que se ha hecho en consola para regresar a un commit específico si así se desea, 
+                      para usarlo se debe usar 
+                      <pre class="text-danger">git reset --hard _hash_</pre>
+                      <pre class="text-danger">git reset --hard 0808461</pre>
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git rebase</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Reorganiza el repositorio
+                      <br>
+                      Une ramas, rehace commits, une commits, divide commits, cambia nombres de commits, borra commits,
+                      en pocas palabras rehace la historia de un proyecto
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End General commands -->
+
+            <!-- Add Command -->
+            <div class="tab-pane fade" id="add" role="tabpanel" aria-labelledby="add-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git add .</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Agrega todos los archivos
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git add _nombreArchivo.extension_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Agrega el archivo especificado
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git add index.html</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git add *._extension_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Agrega todos los archivos del directorio actual con una extensión específica
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git add *.png</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git add "*._extension_"</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Agrega los archivos con una extensión específica de todo el proyecto/repositorio.
+                      <br>
+                      Lleva comillas dobles
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git add "*.png"</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git add _carpeta_/</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Agrega todos los archivos dentro de una carpeta específica
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git add css/</pre>
+                      Ejemplo:
+                      <pre class="text-danger">git add Curso/demo-02/css/</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git add -A</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Agrega todos los archivos que fueron modificados
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git add css/</pre>
+                      Ejemplo:
+                      <pre class="text-danger">git add Curso/demo-02/css/</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git add --all</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Agrega todos los archivos
+                      <br>
+                      Similar al git add . o git add -A
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git add _listaDeArchivos_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Agrega la lista de archivos que especifiquemos
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git add index.html style.css app.js</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git add _carpeta_/*._extension_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Agrega los archivos con extensión específica que estén dentro de una carpeta específica
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git add pdfs/*.pdf</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git add -u</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Actualizar el escenario (staged)
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Add Command -->
+
+            <!-- Commit Command -->
+            <div class="tab-pane fade" id="commit" role="tabpanel" aria-labelledby="commit-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git commit -m "nombreCommit"</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Crea un snapshot o captura del código
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git commit -m "Primer commit"</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git commit -am "nombreCommit"</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Agrega los archivos que Git ya esté pendiente de los cambios y crea el snapshot del código
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git commit -am "Readme actualz"</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git commit --amend -m "nombreCommit"</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Cambia el nombre del último commit
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git commit --amend -m "Actualizamos el readme"</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git commit</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Crea un snapshot pero permitiendo agregar un nombre de varias líneas
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git commit</pre>
+                      Dependiendo la configuración del editor de código, se muestra en la consola o en una pestaña aparte
+                      (en mi caso es una pestaña aparte de Vscode)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git commit -a</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Crea un commit resolviendo conflictos al hacer merge
+                    </td>
+                    <td class="text-muted text-justify">
+                      <pre class="text-warning"><a href="https://styde.net/ramas-y-resolucion-de-conflictos-en-git/">Link de ayuda</a></pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Commit Command -->
+
+            <!-- Checkout Command -->
+            <div class="tab-pane fade" id="checkout" role="tabpanel" aria-labelledby="checkout-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git chekout -- .</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Reconstruye el proyecto a como estaba en el último commit
+                      <br>
+                      <em>
+                        *Recupera código, archivos y carpetas borradas, excepto la carpeta .git (carpeta oculta, no eliminar 
+                         a menos que desee dejar de usar Git o volver a crear el repositorio)
+                      </em>
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git chekout -- _nombreArchivo.extension_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Reconstruye el cambio del archivo especificado (las mayúsculas y minúsculas importan)
+                      <br>
+                      <em>
+                        *Recupera el código a como estaba en el último commit
+                      </em>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git checkout .. README.md</pre>
+                      Ejemplo:
+                      <pre class="text-danger">git checkout .. Curso/demo-03/README.md</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git checkout _nombreRama_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Mueve el proyecto a la rama especificada
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git checkout rama_villanos</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git checkout -b _nombreRama_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Crear una rama y moverse a esa rama con un solo comando
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git checkout -b rama-villano</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git checkout -b _hashRamaARecuperar_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Recuperar una rama eliminada usando el hash o sha
+                      <br>
+                      <em>*Al recuperar la rama, el nombre de la rama pasa a ser el Hash</em>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git checkout -b 51b4202</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Checkout Command -->
+
+            <!-- Reset Command -->
+            <div class="tab-pane fade" id="reset" role="tabpanel" aria-labelledby="reset-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git reset _nombreArchivo.extension_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Quita un archivo del escenario (stage)
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git reset browserconfig.xml</pre>
+                      Ejemplo:
+                      <pre class="text-danger">git reset Curso/demo-02/browserconfig.xml</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git reset *._extension_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Quita los archivos con extensión específica del escenario (stage)
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git reset *.xml</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git reset HEAD _nombreArchivo.extension_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Quita los archivos del escenario (stage) y muestra un mensaje en consola
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git reset HEAD README.md</pre>
+                      Ejemplo:
+                      <pre class="text-danger">git reset HEAD Curso/demo-03/README.md</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git reset --soft HEAD </pre>
+                      <pre class="text-danger">git reset --soft HEAD^^ </pre>
+                      El símbolo ^^ apunta al penúltimo commit y sin ^^ al último commit
+                    </td>
+                    <td class="text-muted text-justify">
+                     Regresa a los cambios hechos en el último commit y agrega los nuevos usando git commit -am
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git reset --mixed _hash_ </pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                     Regresa en el tiempo quitando los archivos del escenario (staged) sin borrar nada físicamente
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git reset --mixed 677b624</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git reset --hard _hash_ </pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                     Regresa en el tiempo borrando todo lo posterior al commit especificado
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git reset --mixed 677b624</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Reset Command -->
+
+            <!-- Log Command -->
+            <div class="tab-pane fade" id="log" role="tabpanel" aria-labelledby="log-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git log --oneline</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra los commits en una sola línea (forma resumida con hash corto)
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">cae0326 Creación del Curso de Git</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git log --oneline --decorate --all --graph</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra los commits de forma "elegante" en una sola línea (forma resumida con hash corto)
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">* cae0326 Creación del Curso de Git</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Log Command -->
+
+            <!-- Status Command -->
+            <div class="tab-pane fade" id="status" role="tabpanel" aria-labelledby="status-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git status -s</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra el estado de los archivos en una sola línea (forma resumida)
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">M Curso/demo-02/css/main.css</pre>
+                      <br>
+                      <span class="text-danger">M:</span> Modificado pero sin agregar al escenario(staged)
+                      <br>
+                      <span class="text-success">M:</span> Modificado y agregado al escenario(staged)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git status -s -b</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra el estado de los archivos en una sola línea (forma resumida) y la rama a la que pertenece
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Status Command -->
+
+            <!-- Diff Command -->
+            <div class="tab-pane fade" id="diff" role="tabpanel" aria-labelledby="diff-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git diff</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra los cambios que hubo en los archivos
+                      <br>
+                      <span class="text-danger">Rojo:</span> Archivo original
+                      <br>
+                      <span class="text-success">Verde:</span> Cambios en el archivo original
+                    </td>
+                    <td class="text-muted text-justify"> </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git diff --staged</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra los cambios que hubo en los archivos que ya estén en el escenario(staged)
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git diff _nombreRama_ _ramaPrincipal_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra las diferencias entre ramas
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git diff rama_villanos master</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Diff Command -->
+
+            <!-- Branch Command -->
+            <div class="tab-pane fade" id="branch" role="tabpanel" aria-labelledby="branch-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git branch</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra las ramas(branchs) existentes
+                    <td class="text-muted text-justify">
+                      <pre class="text-danger"></pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git branch _nombreRama_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Crea una nueva rama
+                      <br>
+                      <span class="text-success">Verde:</span> Rama actual
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git branch rama_villanos</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git checkout _nombreRama_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Mueve el proyecto a la rama especificada
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git checkout rama_villanos</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git diff _nombreRama_ _ramaPrincipal_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra las diferencias entre ramas
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git diff rama_villanos master</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git branch -d _nombreRama_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Borra una rama especificada
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git branch -d rama_villanos</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git checkout -b _nombreRama_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Crear una rama y moverse a esa rama con un solo comando
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git checkout -b rama-villano</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git checkout -b _hashRamaARecuperar_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Recuperar una rama eliminada usando el hash o sha
+                      <br>
+                      <em>*Al recuperar la rama, el nombre de la rama pasa a ser el Hash</em>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git checkout -b 51b4202</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git branch -m _hashNombreViejo_ _nombreNuevo_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Cambiar el nombre de una rama
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git checkout -m 51b4202 rama-conflicto</pre>
+                      Ejemplo:
+                      <pre class="text-danger">git checkout -m rama-conflicto rama-conflicto1</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Branch Command -->
+
+            <!-- Merge Command -->
+            <div class="tab-pane fade" id="merge" role="tabpanel" aria-labelledby="merge-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git merge _nombreRama_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Une cambios donde no hay conflictos (fast forward)
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git merge rama-villanos</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Merge Command -->
+
+            <!-- Tag Command -->
+            <div class="tab-pane fade" id="tag" role="tabpanel" aria-labelledby="tag-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git tag</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra todas las etiquetas del proyecto
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git tag</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git tag _nombreTag_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Crea una etiqueta (Versionado del proyecto) sobre el último commit creado
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git tag superRelease</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git tag -d _nombreTag_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Borrar la etiqueta especificada
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git tag -d superRelease</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git tag -a _nombreEtiqueta_ -m _mensajeEtiqueta_</pre>
+                      <em class="float-left">*Dónde -a es de annotated</em>
+                      <br>
+                      <em class="float-left">*Dónde -m es de message</em>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Crear una etiqueta sobre el último commit creado
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git tag -a v1.0.0 -m "Versión 1.0.0"</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git show _nombreEtiqueta_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Mostrar la información sobre un tag en específico
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git show v1.0.0</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Tag Command -->
+
+            <!-- Stash Command -->
+            <div class="tab-pane fade" id="stash" role="tabpanel" aria-labelledby="stash-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Coloca los archivos en seguimiento en un área temporal
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash save</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Coloca los archivos en seguimiento en un área temporal (hace lo mismo que git stash)
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash save _"mensajeStash"_</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Coloca los archivos en seguimiento en un área temporal (hace lo mismo que git stash)
+                      y agrega un mensaje al stash
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git stash save "Agregamos a loki en los villanos"</pre>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash list</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra todos los stash almacenados
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash list --stat</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra todos los stash almacenados de forma extendida
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git show stash</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra información del último stash de forma extendida (es igual a poner git show stash@{0})
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git show stash@{_numStash_}</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Muestra información del último stash de forma extendida
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git show stash@{1}</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash pop</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Recupera el último trabajo (stash) almacenado temporalmente y borra el stash
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash apply</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Restaura el último registro del stash (es igual a poner git stash apply stash{0})
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash apply stash@{_numeroStash_}</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Restaura un stash en específico
+                    </td>
+                    <td class="text-muted text-justify">
+                      Ejemplo:
+                      <pre class="text-danger">git stash apply stash@{1}</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash drop</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Borra el último trabajo (stash) almacenado temporalmente (es igual a poner git stash drop stash{0})
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash clear</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Borra todos los stash
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash save --keep-index</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Guarda todo menos los archivos que están en el stage(escenario)
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git stash save --include-untracked</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Guarda todos los archivos incluso los que no están en seguimiento
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="text-left">
+                      <b>Nota:</b><em> *Se pueden tener múltiples entradas en el stash</em>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Stash Command -->
+
+            <!-- Rebase Command -->
+            <div class="tab-pane fade" id="rebase" role="tabpanel" aria-labelledby="rebase-tab">
+              <table class="table table-bordered text-center">
+                <thead>
+                  <th>#</th>
+                  <th>Comando</th>
+                  <th class="col-4">Descripción</th>
+                  <th class="col-4">Observaciones</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <pre class="text-danger">git rebase</pre>
+                    </td>
+                    <td class="text-muted text-justify">
+                      Guarda todos los archivos incluso los que no están en seguimiento
+                    </td>
+                    <td class="text-muted text-justify"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Stash Command -->
+
+          </div>
+
+        </div>
+        <!-- End Git -->
+
+        <!-- Files -->
+        <div class="tab-pane fade" id="files" role="tabpanel" aria-labelledby="files-tab">
+          <table class="table table-bordered text-center">
+            <thead>
+              <th>#</th>
+              <th>Comando</th>
+              <th class="col-4">Descripción</th>
+              <th class="col-4">Observaciones</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">git mv</pre>
+                </td>
+                <td class="text-muted text-justify">
+                  Mueve y renombra un archivo mediante Git
+                  <br>
+                  <span class="text-success">R: </span>renamed(renombrado)
+                </td>
+                <td class="text-muted text-justify">
+                  Ejemplo:
+                  <pre class="text-danger">git vm Curso/demo-04/destruir-mundo.txt Curso/demo-04/salvar-mundo.txt</pre>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">git rm</pre>
+                </td>
+                <td class="text-muted text-justify">
+                  Borrar un archivo mediante Git
+                  <br>
+                  <span class="text-success">D: </span>deleted(Eliminado)
+                </td>
+                <td class="text-muted text-justify">
+                  Ejemplo:
+                  <pre class="text-danger">git rm Curso/demo-04/salvar-mundo.txt</pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- End Files -->
+
+        <!-- Glossary -->
+        <div class="tab-pane fade" id="glossary" role="tabpanel" aria-labelledby="glossary-tab">
+          <table class="table table-bordered text-center">
+            <thead>
+              <th>#</th>
+              <th>Término</th>
+              <th class="col-8">Concepto</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">Hash</pre>
+                </td>
+                <td class="text-muted text-justify">Código que Git proporciona para identificar commits</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">Staged</pre>
+                </td>
+                <td class="text-muted text-justify">Archivos preparados para ser agregados al commit</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">Unstaged</pre>
+                </td>
+                <td class="text-muted text-justify">Archivos no preparados para ser agregados al commit</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">HEAD</pre>
+                </td>
+                <td class="text-muted text-justify">Indica el commit actual y en qué rama(branch) se encuentra</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">HASH corto</pre>
+                </td>
+                <td class="text-muted text-justify">Funciona igual que el HASH normal solo que es más pequeño</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">--</pre>
+                </td>
+                <td class="text-muted text-justify">
+                  Significa que después de -- viene una palabra o varias palabras
+                  <br>
+                  Ejemplo:
+                  <pre class="text-danger">--oneline</pre>
+                  <pre class="text-danger">--oneline --all --graph</pre>
+                  <em>*Dónde cada palabra sería un comando</em>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">-</pre>
+                </td>
+                <td class="text-muted text-justify">
+                  Significa que después de - viene una letra o varias letras
+                  <br>
+                  Ejemplo:
+                  <pre class="text-danger">-s</pre>
+                  <pre class="text-danger">-sae</pre>
+                  <em>*Dónde cada letra sería un comando</em>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">WIP</pre>
+                </td>
+                <td class="text-muted text-justify">
+                  Significa: Work In Progress
+                  <br>
+                  Se muestra al hacer Git Stash
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- End Glossary -->
+
+        <!-- Gitignore -->
+        <div class="tab-pane fade" id="gitignore" role="tabpanel" aria-labelledby="gitignore-tab">
+          <table class="table table-bordered text-center">
+            <thead>
+              <th>#</th>
+              <th class="col-2">Nomenclatura</th>
+              <th class="col-5">Descripción</th>
+              <th class="col-4">Observaciones</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td colspan="3" class="text-left">
+                  <span>
+                    El archivo .gitignore se crea desde el editor de código 
+                  <br>
+                    Click derecho, archivo nuevo o cualquier forma donde se pueda crear un nuevo archivo (desde el editor),
+                    <br>
+                    <em><b>Nota: </b>Debe estar en la carpeta raíz (al mismo nivel que la carpeta oculta .git)</em>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4" class="text-left">
+                  <b>Formas de agregar archivos y carpetas a .gitignore</b>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">_nombreArchivo.extension_</pre>
+                </td>
+                <td class="text-muted text-justify">
+                  Ignora el archivo especificado
+                </td>
+                <td class="text-muted text-justify">
+                  Ejemplo:
+                  <pre class="text-danger">data.log</pre>
+                  Ejemplo:
+                  <pre class="text-danger">Curso/demo-04/data.log</pre>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">*._extension_</pre>
+                </td>
+                <td class="text-muted text-justify">
+                  Ignora todos los archivos con extensión específica
+                </td>
+                <td class="text-muted text-justify">
+                  Ejemplo:
+                  <pre class="text-danger">*.log</pre>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <pre class="text-danger">_nombreCarpeta/_</pre>
+                </td>
+                <td class="text-muted text-justify">
+                  Ignora la carpeta especificada y sus archivos
+                </td>
+                <td class="text-muted text-justify">
+                  Ejemplo:
+                  <pre class="text-danger">node_modules</pre>
+                  Ejemplo:
+                  <pre class="text-danger">Curso/demo-4/node_modules</pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- End Glossary -->
+      </div>
+   </div>
+  </div>
+</div>
+<!-- End Commands -->
+
+ <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready( function () {
+      for (let i = 0; i < $('table').length; i++) {
+        
+        $("table:nth(" + i + ") td:nth-child(1)").each(function (indice, elemento) {
+          $(elemento).text(indice += 1);
+        });
+      }
+
+      $("#gitignore table td:nth-child(1)").each(function (indice, elemento) {
+
+        $("#gitignore table tr:nth-child(1) td:nth-child(1)").text(1);
+        $("#gitignore table tr:nth-child(2) td:nth-child(1)").html("<b>Formas de agregar archivos y carpetas a .gitignore:</b>");
+        
+        if (indice == 2) {
+          $(elemento).text(indice += 0);
+        }
+        $(elemento).text(indice);
+
+      });
+
+      $("#stash table td:nth-child(1)").each(function (indice, elemento) {
+
+        // $("#stash table tr:nth-child(15) td:nth-child(1)").text(1);
+        $("#stash table tr:nth-child(15) td:nth-child(1)").html(" <b>Nota:</b><em> *Se pueden tener múltiples entradas en el stash</em>");
+        
+        // if (indice == 2) {
+        //   $(elemento).text(indice += 0);
+        // }
+        // $(elemento).text(indice);
+
+      });
+
+      /* Funciona */
+      // $("#gitignore table tr:nth-child(2) td:nth-child(1)").html("<b>Formas de agregar archivos y carpetas a .gitignore:</b>");
+      // $("#gitignore table tr:nth-child(3) td:nth-child(1)").text("2");
+
+    });   
+  </script>
+</body>
+</html>
